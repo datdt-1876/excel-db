@@ -1,0 +1,28 @@
+<h1>Editing User</h1>
+
+
+
+<%= form_with(url: user_path, method: "put") do |form| %>
+  <div class="field">
+    <%= form.label "ID" %>
+    <%= form.text_field :id, value: @user.id, disabled: true %>
+  </div>
+  <div class="field">
+    <%= form.label "Name" %>
+    <%= form.text_field :name, value: @user.name %>
+  </div>
+  <div class="field">
+    <%= form.label "Email" %>
+    <%= form.text_field :email, value: @user.email %>
+  </div>
+  
+  
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+
+
+<%= link_to 'Show', user_path(@user.id) %> |
+<%= link_to 'Back', users_path %>

@@ -1,0 +1,15 @@
+<%= form_with(url: "/users", method: "post") do |form| %>
+  <div class="field">
+    <%= form.label "Name" %>
+    <%= form.text_field :name %>
+  </div>
+  <div class="field">
+    <%= form.label "Email" %>
+    <%= form.text_field :email %>
+  </div>
+  
+  
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
